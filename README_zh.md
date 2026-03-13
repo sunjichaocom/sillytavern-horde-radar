@@ -30,7 +30,9 @@
        https://github.com/sunjichaocom/sillytavern-horde-radar
 
 5. 点击 **安装 (Install)**。
-*(注意：请确保您已经在 ST 的画图设置中配置好了 AI Horde 的 API 密钥)*
+
+> [!Warning]
+> 请确保您已经在 ST 的画图设置中配置好了 AI Horde 的 API 密钥
 
 ---
 
@@ -38,17 +40,17 @@
 
 打开 ST 的扩展菜单，找到 **AI Horde 全景生图指挥中心** 面板。按照以下直观的步骤操作：
 
-**第一步：刷新雷达与分类检索**
+### 1. 刷新雷达与分类检索
 点击 **刷新雷达** 拉取最新在线数据。下拉菜单已为您准备好了全局最优排序，以及针对各个垂直领域的精选模型列表。
 <br>
 <img src="assets/SettingsMain.png" width="400" alt="主控面板"> &nbsp; <img src="assets/SettingsItems.png" width="250" alt="下拉列表">
 
-**第二步：查看情报与画廊预览**
+### 2. 查看情报与画廊预览
 在下拉框选中感兴趣的模型后，点击 **详情**。即可展开该模型的沉浸式情报面板，查看它的实时算力、汉化简介以及官方提供的生成预览图。
 <br>
 <img src="assets/SettingsDetailsA.png" width="350" alt="详情展示A"> &nbsp; <img src="assets/SettingsDetailsB.png" width="350" alt="详情展示B">
 
-**第三步：一键终极深度同步 (Deep Sync)**
+### 3. 一键终极深度同步 (Deep Sync)
 挑选完毕后，点击 **直接同步**（或列表旁的 **同步** 按钮）。
 雷达会瞬间将该模型的名称、最佳分辨率、步数、采样器等参数，精确无误地**注入到左侧的原生图像生成面板**中，并自动切换对应的提示词风格！
 <br>
@@ -60,23 +62,59 @@
 
 为了让“一键同步”发挥最大威力（自动联动并填入正负面提示词），**强烈建议**在 ST 的 `图像生成 -> 风格` 面板中新建以下四个同名风格：
 
-> 💡 **提示**: 您可以完全使用自己习惯的专属提示词，以下为推荐的基础起手式：
+> [!Warning]
+> 风格名称不带Emoji表情符号
 
-* **风格名称：`Pony (动漫/R-18)`**
-  * **常见提示词前缀**：`score_9, score_8_up, score_7_up, source_anime, masterpiece, best quality, ultra detailed, `
-  * **常见负面提示词前缀**：`score_4, score_5, score_6, source_pony, source_furry, source_cartoon, monochrome, 3d, realistic, bad anatomy, bad hands, missing fingers, `
+> [!NOTE]
+> 您可以完全使用自己习惯的专属提示词，以下为推荐的基础起手式：
 
-* **风格名称：`SDXL (写实/通用)`**
-  * **常见提示词前缀**：`masterpiece, best quality, ultra high res, photorealistic, 8k resolution, highly detailed, `
-  * **常见负面提示词前缀**：`(worst quality, low quality:1.4), bad anatomy, watermark, text, signature, ugly, deformed, `
+<details>
+<summary>🦄 <b>Pony (动漫/R-18)</b></summary>
+<br>
 
-* **风格名称：`SD 1.5 (动漫/韩漫2.5D)`**
-  * **常见提示词前缀**：`masterpiece, best quality, highly detailed, realistic anime style, 2.5d, photorealistic lighting, `
-  * **常见负面提示词前缀**：`(worst quality, low quality:1.4), bad anatomy, extra digits, signature, watermark, EasyNegative, `
+* 🦄 **风格名称 (Style Name)**: 
+  `Pony (动漫/R-18)`
+* 🟢 **正向提示词 (Positive)**: 
+  `score_9, score_8_up, score_7_up, source_anime, masterpiece, best quality, ultra detailed`
+* 🔴 **负向提示词 (Negative)**: 
+  `score_4, score_5, score_6, source_pony, source_furry, source_cartoon, monochrome, 3d, realistic, bad anatomy, bad hands, missing fingers`
+</details>
 
-* **风格名称：`SD 1.5 (纯写实/真人照)`**
-  * **常见提示词前缀**：`RAW photo, masterpiece, best quality, ultra-detailed, realistic, photorealistic, 8k uhd, dslr, soft lighting, film grain, `
-  * **常见负面提示词前缀**：`(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), (worst quality, low quality:1.4), (deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, (mutated hands and fingers:1.4), mutation, mutated, ugly, `
+<details>
+<summary>📸 <b>SDXL (写实/通用)</b></summary>
+<br>
+
+* 📸 **风格名称 (Style Name)**: 
+  `SDXL (写实/通用)`
+* 🟢 **正向提示词 (Positive)**: 
+  `masterpiece, best quality, ultra high res, photorealistic, 8k resolution, highly detailed`
+* 🔴 **负向提示词 (Negative)**: 
+  `(worst quality, low quality:1.4), bad anatomy, watermark, text, signature, ugly, deformed`
+</details>
+
+<details>
+<summary>🌸 <b>SD 1.5 (动漫/韩漫2.5D)</b></summary>
+<br>
+
+* 🌸 **风格名称 (Style Name)**: 
+  `SD 1.5 (动漫/韩漫2.5D)`
+* 🟢 **正向提示词 (Positive)**: 
+  `masterpiece, best quality, highly detailed, realistic anime style, 2.5d, photorealistic lighting`
+* 🔴 **负向提示词 (Negative)**: 
+  `(worst quality, low quality:1.4), bad anatomy, extra digits, signature, watermark, EasyNegative`
+</details>
+
+<details>
+<summary>🎞️ <b>SD 1.5 (纯写实/真人照)</b></summary>
+<br>
+
+* 🎞️ **风格名称 (Style Name)**: 
+  `SD 1.5 (纯写实/真人照)`
+* 🟢 **正向提示词 (Positive)**: 
+  `RAW photo, masterpiece, best quality, ultra-detailed, realistic, photorealistic, 8k uhd, dslr, soft lighting, film grain`
+* 🔴 **负向提示词 (Negative)**: 
+  `(deformed iris, deformed pupils, semi-realistic, cgi, 3d, render, sketch, cartoon, drawing, anime:1.4), (worst quality, low quality:1.4), (deformed, distorted, disfigured:1.3), poorly drawn, bad anatomy, wrong anatomy, extra limb, missing limb, floating limbs, mutated hands, ugly`
+</details>
 
 ---
 
